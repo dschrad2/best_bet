@@ -20,7 +20,7 @@ requirements.txt - An overview of the Flask and CS50 libraries that were used to
 helpers.py - A helper Python file that creates a few useful functions, such as comma, which adds commas in the thousands place to present table data with more polish.\
 best_bet.db - A database consisting of three tables--users, which tracks each user and their chip total, transactions, which tracks all chip purchases made, and
 high_scores, which as the name suggests tracks all of the chip winnings from each user's games in order from highest to lowest.\
-application.py - The home file which contains all of the Python and Flask functionality used to produce the web game.\
+application.py - The home file which contains all of the Python and Flask functionality used to produce the web game.
 
 The game includes the following html files:
 
