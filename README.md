@@ -5,14 +5,14 @@ This project is a betting trivia game webapp that allows users to bet on their a
 
 The game is a single-player version of a multiplayer game I helped refine with a friend, with whom I used to play with other friends.\
 The goal of Best Bet! is to get as many chips as possible by answering 8 questions, and betting as much as possible on each answer\
-in which you're confident without losing chips on answers you get wrong.\
+in which you're confident without losing chips on answers you get wrong.
 
 Players start with 100 chips in the game, and for each question, the player must bet at least 10 chips and up to all of their chips. If they
 get the question correct, they double their bet. For instance, if a player has a stack of 100 chips, and they bet 50 of their chips and get it right,
-they win 100 chips to add to their stack of 100, for 200 total chips. Any wrong answers, and the player will lose all of their bet.\
+they win 100 chips to add to their stack of 100, for 200 total chips. Any wrong answers, and the player will lose all of their bet.
 
 However, in order to keep the player in the game, any time a player loses all of their chips, they automatically receive 10 chips immediately to keep playing.
-Their chip total will never fall below 10, and as a result they can still win a lot of chips even if they go big and lose early on.\
+Their chip total will never fall below 10, and as a result they can still win a lot of chips even if they go big and lose early on.
 
 The game is made up of the following non-display files:\
 
@@ -34,7 +34,7 @@ layout.html - A file that holds all of the boilerplate display content common to
 index.html - A file that displays the home page of the web game, including a brief description of the game and a table of the user's chip total.\
 history.html - A file that displays a page showing a history of all chip purchases a user has made from their account.\
 chips.html - A file that displays a page allowing the user to purchase additional chips for their stack.\
-apology.html - A file that displays a page of boilerplate language in the event of an error in the game.\
+apology.html - A file that displays a page of boilerplate language in the event of an error in the game.
 
 The game also includes these design and scripting files:\
 
