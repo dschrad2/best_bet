@@ -14,7 +14,7 @@ they win 100 chips to add to their stack of 100, for 200 total chips. Any wrong 
 However, in order to keep the player in the game, any time a player loses all of their chips, they automatically receive 10 chips immediately to keep playing.
 Their chip total will never fall below 10, and as a result they can still win a lot of chips even if they go big and lose early on.
 
-The game is made up of the following non-display files:\
+The game is made up of the following non-display files:
 
 requirements.txt - An overview of the Flask and CS50 libraries that were used to build up the game.\
 helpers.py - A helper Python file that creates a few useful functions, such as comma, which adds commas in the thousands place to present table data with more polish.\
@@ -22,7 +22,7 @@ best_bet.db - A database consisting of three tables--users, which tracks each us
 high_scores, which as the name suggests tracks all of the chip winnings from each user's games in order from highest to lowest.\
 application.py - The home file which contains all of the Python and Flask functionality used to produce the web game.\
 
-The game includes the following html files:\
+The game includes the following html files:
 
 scores.html - A file that displays a page showing the single-game high scores and total chip high scores among all players.\
 rules.html - A file that displays a page showing the rules of Best Bet!\
@@ -36,7 +36,7 @@ history.html - A file that displays a page showing a history of all chip purchas
 chips.html - A file that displays a page allowing the user to purchase additional chips for their stack.\
 apology.html - A file that displays a page of boilerplate language in the event of an error in the game.
 
-The game also includes these design and scripting files:\
+The game also includes these design and scripting files:
 
 styles.css - A style sheet for some of my design features, such as purple buttons, which I love.\
 script.js - A file that holds all of the Javascript used to make Best Bet! playable, as well as track chip totals within the game.\
