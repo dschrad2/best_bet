@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Purchase History
+{% endblock %}
+
+{% block main %}
+    <h4>Purchase History</h4>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align: left">Number of Chips</th>
+                    <th style="text-align: right">Price</th>
+                    <th style="text-align: right">Time of Transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td style="text-align: left">{{ transaction["amount"] | comma }}</td>
+                        <td style="text-align: right">{{ transaction["price"] | usd }}</td>
+                        <td style="text-align: right">{{ transaction["transacted"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

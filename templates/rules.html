@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Game Rules
+{% endblock %}
+
+{% block main %}
+    <h2>Game Rules</h2>
+    <div class="container" style="text-align: left">
+          <h4>Game Includes:</h4>
+              <ol>
+                <li>Trivia questions of various categories, including history, science, and sports</li>
+                <li>Poker-style chips</li>
+                <li>A form to input bets</li>
+              </ol>
+          <hr>
+
+          <h4>To Win:</h4>
+              <ol>
+                <li>Get as many questions right as possible, and bet as much as possible when you think you're right.</li>
+                <li>Right answers are worth double your bet, so your chips can stack up quickly if you know your trivia.</li>
+              </ol>
+          <hr>
+
+
+          <h4>Gameplay:</h4>
+            <ol>
+              <li>Before the game begins,
+              the player receives 100 game chips with which to bet.</li>
+              <li>The minimum bet is always 10.
+                <ul>
+                  <li>Even if a player loses all of their chips,
+                  they may always bet with this “free bet,”
+                  to keep them in the game and to add action to each question.
+                  Their chip stack will never drop below 10.
+                  </li>
+                </ul>
+              </li>
+              <li>Outside of playing the “free bet," there is no minimum bet,
+              and each player can bet as much money as they have.
+              </li>
+              </li>
+              <li>When the trivia question pops up, the player
+              submits their bet and clicks their answer.
+              </li>
+              <li>The correct answer is then revealed--green for the correct answer, red for all incorrect answers.</li>
+              <li>Betting payouts:
+                <ul>
+                  <li>2:1 for getting the question correct.</li>
+                </ul>
+              </li>
+              <li>When the player bets <em>incorrectly</em>, they lose all the chips they bet.</li>
+              <li>The game consists of 8 random questions.</li>
+              <li>After the player finishes the game, the chips they've won are submitted for a high score.</li>
+              <li>The chips the player's won are also added to their total stack.</li>
+            </ol>
+        </div>
+{% endblock %}

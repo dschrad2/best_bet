@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Chips
+{% endblock %}
+
+
+{% block main %}
+  <script>
+
+    function calculateTotal()
+    {
+      let unit_price=0.001;
+      let item_price={};
+      let item_price_first_1000={};
+
+
+      if ($("#chips").val() >= 1000) {
+        item_price_first_1000 = (1000 * unit_price * 5);
+        item_price = (($("#chips").val() - 1000) * unit_price);
+        item_price = (item_price + item_price_first_1000);
+        $("#price").val(item_price).toFixed(2);
+      }
+      else {
+        item_price = ($("#chips").val() * (unit_price * 5) );
+        $("#price").val(item_price).toFixed(2);
+      }
+
+
+    }
+
+    $(function()
+     {
+        $(".chips").on("change keyup",calculateTotal);
+    })
+
+  </script>
+
+  <form action="/chips" method="post">
+        <div class="container-fluid" style="list-style-position:inside">
+            <div class="col-12 control-group form-group" style="text-align:center">
+              <div>
+                <h4>Price per chip ($):</h4>
+                <ul>
+                  <li>For first 1,000 chips: <strong>$0.005/chip</strong></li>
+                  <li>Each additional chip: <strong>$0.001/chip</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 control-group form-group" style="text-align:center">
+              <label><h4>How many new chips would you like?</h4></label>
+              <br>
+              <input id="chips" name="chips" class="chips" placeholder="Chips" type="number" min=0 step=100 required>
+            </div>
+            <div class="col-12 control-group form-group" style="text-align:center">
+              <label><h4>Total price ($):</h4></label>
+              <br>
+              <input id="price" name="price" class="calculate" placeholder="Price" type="number" step="0.01" readonly>
+            </div>
+
+            <div style="text-align:center">
+            <button style="margin-top: 10px;" type="submit" class="btn btn-primary" id="purchase">Purchase</button>
+            </div>
+        </div>
+  </form>
+{% endblock %}

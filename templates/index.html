@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Best Bet
+{% endblock %}
+
+{% block main %}
+    <div class="col-sm-10">
+          <h2>Welcome!</h2>
+          <br>
+          <hr>
+          <br>
+          <h4>About the Game</h4>
+          <p><strong>Best Bet</strong> is going to look a little familiar to you
+          if you've played some of the most popular trivia games.
+
+          You can play the game--answering as many questions
+          correctly as you can--but the real fun is in the gambling,
+          betting on yourself to get questions right. That's where the points can really add up.
+          </p>
+
+          <p>
+          Bring your poker instincts. You don't even need
+          to be the smartest trivia
+          player to be the <strong>Best Bet</strong>. Good luck!
+          </p>
+          <br>
+          <hr>
+          <br>
+
+          <h4>For Help</h4>
+          <p>On the navigation bar above are several resources you can use to learn
+          everything about the game before starting.
+          You can also buy more chips to raise the stakes,
+          or check out the scores of the game's best players.
+          Be sure to sign up before you start playing
+          to track your scores and chip totals.</p>
+          <br>
+          <hr>
+          <br>
+          <h4>Chips Balance</h4>
+    </div>
+
+    <div class="col-sm-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="text-align: left">Name</th>
+                    <th style="text-align: right">Chip Value</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: left">
+                <tr>
+                    <td style="text-align: left">{{ username }}</td>
+                    <td style="text-align: right">{{ chips | comma }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

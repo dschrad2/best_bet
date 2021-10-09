@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Let's Play!
+{% endblock %}
+
+{% block main %}
+    <div class="play-container">
+        <div id="question-container" class="hide">
+            <div id="question" class="question-text"><strong>Question</strong></div>
+            <br>
+            <div id="answer-buttons" class="btn-grid">
+               <button class="btn">Answer 1</button>
+               <button class="btn">Answer 2</button>
+               <button class="btn">Answer 3</button>
+               <button class="btn">Answer 4</button>
+               <button class="btn">Answer 5</button>
+               <button class="btn">Answer 6</button>
+            </div>
+        </div>
+        <br>
+        <div id="intro" class="intro">
+
+        <h2>Let's Play Best Bet!</h2>
+        <br>
+        <strong>New to the game?</strong>
+        <br>
+        <br>
+        You'll start with 100 chips in which to bet, and you can bet
+        anywhere between 10 and all of your chips on each of your answers. Set your bet,
+        then click on your answer. You'll have eight questions to earn as many chips as possible.
+        Be strategic with your bets, and be open to taking some risks.
+        <br>
+        <br>
+        Enjoy the game, and keep playing to beat your previous score!</div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next Question</button>
+        </div>
+
+        <form action="/play" method="post" id="betting">
+            <div class="container-fluid" style="list-style-position:inside">
+                <br>
+                <div class="col-12 control-group form-group" style="text-align:center">
+                  <label class="bet hide"><h5>How much would you like to bet?</h5></label>
+                  <input id="bet-input" name="bet" class="bet hide" placeholder="Minimum 10" type="number" min=10 step=1 value=10 required>
+                  <input id="bankroll" name="bankroll" class="hide" type="number" readonly>
+                  <button type="submit" id="end-btn" class="end-btn btn hide">Finish Game</button>
+                </div>
+            </div>
+        </form>
+
+        <span id="win_or_lose"></span>
+        <br>
+        <span id="chips_in_bank"></span>
+
+        <p id="answer"></p>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    High Scores
+{% endblock %}
+
+{% block main %}
+    <h4>Single-Game High Scores</h4>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align: left">Username</th>
+                    <th style="text-align: right">Chips Won</th>
+                    <th style="text-align: right">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for score in scores %}
+                    <tr>
+                        <td style="text-align: left">{{ score["username"] }}</td>
+                        <td style="text-align: right">{{ score["chips_gained"] | comma }}</td>
+                        <td style="text-align: right">{{ score["time"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <h4>Overall High Scores</h4>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align: left">Username</th>
+                    <th style="text-align: right">Total Chips</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for chip in chips %}
+                    <tr>
+                        <td style="text-align: left">{{ chip["username"] }}</td>
+                        <td style="text-align: right">{{ chip["chips"] | comma }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
